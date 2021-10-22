@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  appStatus = new Promise((resolve, reject)=>{
+  appStatus = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('stable')
+      resolve('stable');
     }, 2000);
   });
   servers = [
@@ -51,6 +51,8 @@ export class AppComponent {
     };
   }
   onAddServer() {
+    console.log('adding server');
+
     this.servers.push({
       instanceType: 'small',
       name: 'new server',
